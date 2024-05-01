@@ -1,10 +1,12 @@
-- 👋 Hi, I’m @yashgar
-- 👀 I’m interested in anime
-- 🌱 I’m currently learning coding
-- 💞️ I’m looking to collaborate on Tea
-- 📫 How to reach me ig-yash_agarwal_3011
-
-<!---
-yashgar/yashgar is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+![Screenshot 2024-05-01 121351](https://github.com/yashgar/yashgar/assets/117198025/cca2ab41-a3bd-4d3e-a62f-ed92e0c3d14d)
+![Screenshot 2024-05-01 121411](https://github.com/yashgar/yashgar/assets/117198025/50cf3062-c12a-46af-9b5e-837524d7dac7)
+![Screenshot 2024-05-01 121427](https://github.com/yashgar/yashgar/assets/117198025/13bf6b5a-878c-40a8-93df-c4c4295e062b)
+![Screenshot 2024-05-01 121443](https://github.com/yashgar/yashgar/assets/117198025/38c942b7-3e7e-4cc2-b414-f160efe86185)
+![Screenshot 2024-05-01 121500](https://github.com/yashgar/yashgar/assets/117198025/c7043f43-a934-4685-bbc3-18c607aa4df2)
+![Screenshot 2024-05-01 121520](https://github.com/yashgar/yashgar/assets/117198025/90b40681-aa3f-4187-95cc-fdca7e8bb097)
+![Screenshot 2024-05-01 121541](https://github.com/yashgar/yashgar/assets/117198025/8c610b0f-1195-4211-8f53-f60f3aac0974)
+![Screenshot 2024-05-01 121614](https://github.com/yashgar/yashgar/assets/117198025/04144e66-3346-4989-ba67-dc5d33973ea5)
+![Screenshot 2024-05-01 121632](https://github.com/yashgar/yashgar/assets/117198025/34802421-1881-4c28-8e87-a061d5e60a3c)
+![Screenshot 2024-05-01 121646](https://github.com/yashgar/yashgar/assets/117198025/930ec64d-ac0e-44d2-a115-dd48a578d31e)
+![Screenshot 2024-05-01 121703](https://github.com/yashgar/yashgar/assets/117198025/30294874-8d46-4adb-9a2e-c84c6f98a704)
+![Screenshot 2024-05-01 121719](https://github.com/yashgar/yashgar/assets/117198025/2a408d9d-7fc1-4e5a-a38b-2db7618d4b97)
