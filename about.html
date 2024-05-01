@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="site.css">
+  <title>Sunshine Gems</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="list">
+      <a href="index.html"><img src="icon.jpg" alt="Logo" class="logo" style="border-radius: 120px;"></a>
+      <div>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="shop.html">STORE</a></li>
+          <li><a href="exhibits.html">EXHIBITS</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><button class="open-button" onclick="openForm()">LOG IN</button>
+            <div class="form-popup" id="myForm">
+              <form class="form-container">
+                <img src="icon.jpg" alt="Logo" class="logo"
+                  style="border-radius: 120px; height: 60px; width: 60px; float: left;">
+                <h1 style="color: black;text-align: justify;">Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h1 align="center">ABOUT SUNSHINE GEMS</h1>
+  <div class="about" style="background-color: lavenderblush;">
+    <h2 align="center" style="font-size: 40px; color: rgb(255, 77, 0);">Unearth the Enchanting World of Natural Polished
+      Stones</h2>
+    <p align="center" style="font-size: 24px; padding: 30px;">Immerse yourself in the captivating world of our natural
+      polished stones, each one a testament to the artistry of our skilled Indian craftsmen. Our unwavering dedication
+      to quality begins with the meticulous selection process. Only the most exceptional rough stones, hand-picked by
+      our team of gemologists with discerning eyes, are chosen to embark on their transformation.
+      Each stone undergoes a meticulous polishing process, meticulously undertaken by hand. This ensures that every
+      facet and nuance of its natural beauty is meticulously brought to life. The result is a symphony of light and
+      color, a breathtakingly beautiful finish that unveils the stone's unique character and the inherent splendor
+      gifted by nature.
+      But the allure of our collection extends beyond their dazzling brilliance. We offer a captivating array of shapes,
+      a veritable treasure trove waiting to be discovered. From smooth, calming ovals to dynamic, geometrical cuts, our
+      stones cater to every taste and design vision. Whether you seek a centerpiece that radiates timeless elegance or a
+      statement piece brimming with bold personality, you'll find the perfect stone to ignite your creative spark.
+      With such a diverse and mesmerizing collection, your quest for the ideal natural polished stone culminates here.
+      Let these exquisite treasures elevate your creations and bring a touch of captivating beauty to your world.</p>
+  </div>
+  <div class="feedback" style="background-color: lavenderblush;">
+    <form class="feedbacks">
+      <h1 style="color: black;text-align: center;">FEEDBACK</h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email"><br><br>
+
+      <label for="views"><b>Enter your feedback</b></label><br>
+      <textarea class="feed" rows="10" cols="10" placeholder="Enter Feedback" id="view"></textarea>
+      <br><br>
+      <button type="submit" class="butn">SUBMIT</button>
+      <button type="button" class="butn" onclick="document.getElementById('email').value = '';document.getElementById('view').value = '';">Cancel</button>
+    </form>
+  </div>
+  <div class="foot">
+    <table class="tfoot">
+      <tr>
+        <th>USEFUL LINKS</th>
+        <th>REACH US</th>
+      </tr>
+      <tr>
+        <td><a href="shop.html">Store</a></td>
+        <td><img src="phone.png" height="40px" width="40px">Phone</td>
+      </tr>
+      <tr>
+        <td><a href="exhibits.html">Exhibits</a></td>
+        <td><img src="mail.png" height="40px" width="40px">Mail</td>
+      </tr>
+      <tr>
+        <td><a href="index.html">New Arrivals</a></td>
+        <td><img src="chat.png" height="40px" width="40px"><a href="about.html">Chat</a></td>
+      </tr>
+    </table>
+  </div>
+  <script src="site.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</body>
+
+</html>

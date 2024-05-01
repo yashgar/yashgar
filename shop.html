@@ -1,0 +1,286 @@
+<html ng-app="myApp">
+
+<head>
+  <link rel="stylesheet" href="site.css">
+  <title>Sunshine Gems</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script>
+    angular.module('myApp', []).controller('SearchCtrl', function ($scope) {
+      $scope.users = [
+        { category: 'bracelletes' },
+        { category: 'pendants' },
+        { category: 'cart' },
+        { category: 'loose stones' }
+      ];
+
+      $scope.filteredUsers = [];
+
+      $scope.searchUsers = function () {
+        const searchTerm = $scope.searchText.toLowerCase();
+        $scope.filteredUsers = $scope.users.filter(user =>
+          user.category.toLowerCase().includes(searchTerm)
+        );
+      };
+
+      $scope.prices = {
+        A: 10.00,
+        B: 20.00,
+        C: 50.00
+      };
+      $scope.quantity1 = 0;
+      $scope.quantity2 = 0;
+      $scope.quantity3 = 0;
+      $scope.totalCost = 0.00;
+
+      $scope.calculateCost = function () {
+        const itemPrice1 = 10.00;
+        const itemPrice2 = 20.00;
+        const itemPrice3 = 50.00;
+        $scope.totalCost = (itemPrice1 * $scope.quantity1) + (itemPrice2 * $scope.quantity2) + (itemPrice3 * $scope.quantity3);
+      };
+    });
+  </script>
+</head>
+
+<body ng-controller="SearchCtrl">
+  <nav class="nav">
+    <div class="list">
+      <a href="index.html"><img src="icon.jpg" alt="Logo" class="logo" style="border-radius: 120px;"></a>
+      <div>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="shop.html">STORE</a></li>
+          <li><a href="exhibits.html">EXHIBITS</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><button class="open-button" onclick="openForm()">LOG IN</button>
+            <div class="form-popup" id="myForm">
+              <form class="form-container">
+                <img src="icon.jpg" alt="Logo" class="logo"
+                  style="border-radius: 120px; height: 60px; width: 60px; float: left;">
+                <h1 style="color: black;text-align: justify;">Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div align="center" style="background-color: coral;">
+    <input type="text" ng-model="searchText" placeholder="Search category" style="height: 60px; width: 400px;">
+    <button ng-click="searchUsers()" style="height: 60px; width: 90px; background-color: lavenderblush;">Search</button>
+    <br><br><br><br><br><br>
+    <ul ng-if="filteredUsers.length > 0">
+      <li ng-repeat="user in filteredUsers">
+        <a href=#{{user.category}} style="color: black;">{{ user.category }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="store">
+    <h1 align="center" id="bracelletes">BRACELLETES</h1>
+    <div class="itemstones" id="itemstones">
+      <table align="center">
+        <tr>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 10.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 10.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 10.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 10.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h1 align="center" id="pendants">PENDANTS</h1>
+    <div class="itemstones" id="itemstones">
+      <table align="center">
+        <tr>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 20.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 20.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 20.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 20.00</p>
+              <p>Some text about the jeans..</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h1 align="center" id="loose stones">LOOSE STONES</h1>
+    <div class="itemstones" id="itemstones">
+      <table align="center">
+        <tr>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 50.00</p>
+              <p>Some text about the jeans..</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 50.00</p>
+              <p>Some text about the jeans..</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 50.00</p>
+              <p>Some text about the jeans..</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="brace1.jpg" alt="Denim Jeans" style="width:100%">
+              <h1>Tailored Jeans</h1>
+              <p class="price">Rs 50.00</p>
+              <p>Some text about the jeans..</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div><br>
+  <div align="center">
+    <h1>CART</h1>
+    <form>
+      <h2>QUANTITY PER ITEM</h2>
+      <table>
+        <tr>
+          <td style="color: coral;">BRACELLETES</td>
+          <td style="color: coral;">PENDANTS</td>
+          <td style="color: coral;">LOOSE STONES</td>
+        </tr>
+        <tr>
+          <td style="color: coral;"><label for="quantity">Quantity:</label>
+            <input type="number" min="0" ng-model="quantity1" ng-change="calculateCost()">
+          </td>
+          <td style="color: coral;"><label for="quantity">Quantity:</label>
+            <input type="number" min="0" ng-model="quantity2" ng-change="calculateCost()">
+          </td>
+          <td style="color: coral;">
+            <label for="quantity">Quantity:</label>
+            <input type="number" min="0" ng-model="quantity3" ng-change="calculateCost()">
+          </td>
+        </tr>
+      </table>
+      <p>Total Cost: Rs{{ totalCost }}</p>
+    </form>
+    <button class="open-button" onclick="openForm1()">BUY NOW</button>
+    <div class="payment" id="payment">
+      <h1 class="payTitle">Personal Information</h1>
+      <label>Name and Surname</label>
+      <input type="text" placeholder="John Doe" class="payInput">
+      <label>Phone Number</label>
+      <input type="text" placeholder="+1 234 5678" class="payInput">
+      <label>Address</label>
+      <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+      <p>Total Amount: Rs{{ totalCost }}</p>
+      <h1 class="payTitle">Card Information</h1>
+      <input type="password" class="payInput" placeholder="Card Number">
+      <div class="cardInfo">
+        <input type="text" placeholder="mm" class="payInput sm">
+        <input type="text" placeholder="yyyy" class="payInput sm">
+        <input type="text" placeholder="cvv" class="payInput sm">
+      </div>
+      <button class="payButton" onclick="checkout()">Checkout!</button>
+      <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+    </div>
+    </form>
+  </div>
+  </div>
+  <div class="foot">
+    <table class="tfoot">
+      <tr>
+        <th>USEFUL LINKS</th>
+        <th>REACH US</th>
+      </tr>
+      <tr>
+        <td><a href="shop.html">Store</a></td>
+        <td><img src="phone.png" height="40px" width="40px">Phone</td>
+      </tr>
+      <tr>
+        <td><a href="exhibits.html">Exhibits</a></td>
+        <td><img src="mail.png" height="40px" width="40px">Mail</td>
+      </tr>
+      <tr>
+        <td><a href="index.html">New ARRIVALS</a></td>
+        <td><img src="chat.png" height="40px" width="40px"><a href="about.html">Chat</a></td>
+      </tr>
+    </table>
+  </div>
+  <script src="site.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</body>
+
+</html>
